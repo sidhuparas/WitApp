@@ -1,5 +1,7 @@
 # WitApp
 
+<img src="http://downloadinformer.com/internship/2.png" width=40%>   <img src="http://downloadinformer.com/internship/3.png" width=40%> 
+
 ## What is it?
 
 It's an Android application developed using React Native which extracts the user intent from a text input. User will need to type some specific query and the app will display the user intention.
@@ -37,7 +39,7 @@ First of all, on the server, a wit app is created which provides the option to c
 
 ## How to use it?
 
-Simply download and install the app using this link. After launching it, input the query and press Submit. Depending on your internet connection, the intent will be fetched within a couple of seconds and then showed in form of text.
+Simply download and install the app using [this link](http://downloadinformer.com/internship/witapp.apk). After launching it, input the query and press Submit. Depending on your internet connection, the intent will be fetched within a couple of seconds and then showed in form of text.
 
 ## Support
 
