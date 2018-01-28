@@ -16,7 +16,7 @@ getit(){
 
   axios.post('https://app.assassinate72.hasura-app.io/wit', formData)
   .then(response =>
-    this.setState({ intent: 'Intent is ' + response.data.intent[0].value, loading: false })
+    this.setState({ intent: 'Intent is ' + response.data.intent[0].value.toUpperCase(), loading: false })
   )
   .catch(error =>
     this.setState({ intent: 'An error occurred while processing your request. ' + error.message, loading: false })
@@ -39,11 +39,10 @@ renderButton() {
   );
 }
 
-onSubmit() {
-  Toast.show({
-    text: 'Done',
-    position: 'bottom',
-    buttonText: 'OK' });
+getResult(){
+  if (this.state.intent.indexOf('undefined')>-1)
+  return (<Text style={styles.error}>Please provide suitable input. We accept inputs of categories weather, time taken, distance and directions. </Text>);
+  else return (< Text style={styles.resultStyle}>{this.state.intent} </Text>);
 }
 
   render(){
@@ -61,7 +60,7 @@ onSubmit() {
 
       </View>
       <View>
-        <Text style={styles.resultStyle}> {this.state.intent} </Text>
+        {this.getResult()}
       </View>
       </View>
     );
@@ -90,6 +89,12 @@ const styles={
 
   resultStyle:{
     color: 'green',
+    fontSize:16,
+    marginTop:20
+  },
+
+  error:{
+    color:'red',
     fontSize:16,
     marginTop:20
   }
