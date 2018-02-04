@@ -41,6 +41,18 @@ First of all, on the server, a wit app is created which provides the option to c
 
 Simply download and install the app using [this link](http://downloadinformer.com/internship/witapp.apk). After launching it, input the query and press Submit. Depending on your internet connection, the intent will be fetched within a couple of seconds and then showed in form of text.
 
+## Cloning and Running
+
+```
+1. git clone https://github.com/sidhuparas/WitApp.git
+2. cd WitApp
+3. npm install (Installs dependencies)
+4. react-native run-android (Runs application on emulator/connected android device)
+```
+
 ## Support
 
 Feel free to raise an issue or make a pull request. I will be happy to improve my app :)
+
+### [GitHub Link](https://github.com/sidhuparas/WitApp)
+
