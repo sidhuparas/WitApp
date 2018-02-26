@@ -7,14 +7,17 @@ import Spinner from './Spinner';
 class MainScreen extends Component {
   state = { text: '', intent: [], result: '', loading: false };
 
-
 getit(){
   const { text, result, loading } = this.state;
+
+  // Change clusterName to your cluster's name here
+  const clusterName = 'assassinate72';
+
   this.setState({  loading: true, intent:'' });
   const formData = new FormData();
   formData.append('comment', text);
 
-  axios.post('https://app.assassinate72.hasura-app.io/wit', formData)
+  axios.post('https://app.' + clusterName + '.hasura-app.io/wit', formData)
   .then(response =>
     this.setState({ intent: 'Intent is ' + response.data.intent[0].value.toUpperCase(), loading: false })
   )
