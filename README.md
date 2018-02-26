@@ -32,6 +32,8 @@ First of all, on the server, a wit app is created which provides the option to c
 2. A JSON response is received back with an intent (if any).
 3. The received JSON is parsed to get the actual intent and then it's showed to the user.
 
+<b>IMP. NOTE:</b> If the app is returning error code 503, you might need to wake up the cluster by clicking [here](https://app.assassinate72.hasura-app.io).
+
 ## What does it use?
 
 1. [Wit](https://wit.ai/docs/recipes#categorize-the-user-intent)
@@ -41,6 +43,18 @@ First of all, on the server, a wit app is created which provides the option to c
 
 Simply download and install the app using [this link](http://downloadinformer.com/internship/witapp.apk). After launching it, input the query and press Submit. Depending on your internet connection, the intent will be fetched within a couple of seconds and then showed in form of text.
 
+## Cloning and Running
+
+```
+1. git clone https://github.com/sidhuparas/WitApp.git
+2. cd WitApp
+3. npm install (Installs dependencies)
+4. react-native run-android (Runs application on emulator/connected android device)
+```
+
 ## Support
 
 Feel free to raise an issue or make a pull request. I will be happy to improve my app :)
+
+### [GitHub Link](https://github.com/sidhuparas/WitApp)
+
